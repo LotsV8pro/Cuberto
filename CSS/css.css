@@ -1,3 +1,4 @@
+/* Estilos generales para el cuerpo del documento */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     background-color: #fff;
 }
 
+/* Estilos para el encabezado */
 header {
     background-color: #fff;
     color: teal;
@@ -13,47 +15,55 @@ header {
     font-size: x-large;
 }
 
+/* Estilos para el subtítulo del encabezado */
 header h2 {
     color: #333;
     text-align: left;
     font-size: 20px;
 }
 
+/* Estilos para las secciones */
 section {
     padding: 20px;
 }
 
+/* Estilos para las columnas dentro de las secciones */
 .column {
     background-color: #f2f2f2;
     margin: 10px 0;
     padding: 20px;
 }
 
+/* Estilos para el título de las columnas */
 .column h2 {
     margin-top: 0;
 }
 
+/* Estilos para el contenido dentro de las columnas */
 .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+/* Estilos para el texto dentro de las columnas */
 .text {
     flex: 1;
     margin-right: 20px;
 }
 
+/* Estilos para las imágenes dentro de las columnas */
 .image {
     flex: 1;
 }
 
+/* Estilos para las imágenes dentro de las columnas */
 .image img {
     max-width: 100%;
     height: auto;
 }
 
-/* Estilo específico para la imagen de la sección 2 */
+/* Estilos específicos para la imagen de la sección 2 */
 .section-2 .image {
     justify-content: flex-start; /* Alineamos la imagen de la sección 2 a la izquierda */
     order: 1;
@@ -63,53 +73,97 @@ section {
     margin-right: 20px; /* Añadimos margen derecho para separar el texto de la imagen */
     justify-content: flex-start;
 }
+.contentclass {
+    font-size: 33px;
+    color: rgb(97, 97, 97)
+}
 
-/* Estilo específico para las imágenes de las secciones 1 y 3 */
+/* Estilos específicos para las imágenes de las secciones 1 y 3 */
 .section-1 .image,
 .section-3 .image {
     justify-content: flex-end; /* Alineamos las imágenes de las secciones 1 y 3 a la derecha */
     margin-left: auto; /* Añadimos margen izquierdo automático para empujar las imágenes completamente a la derecha */
 }
 
+
+/* Estilos para el pie de página */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    text-align: left;
+}
+
+/* Estilos para el título del pie de página */
+.footer-title {
     text-align: center;
 }
 
+/* Estilos para las columnas del pie de página */
 .footer-columns {
-    display: flex;
-    justify-content: center;
+    display: flex; /* Cambiamos el display a flex para alinear las columnas en línea */
+    justify-content: center; /* Centramos las columnas horizontalmente */
+    flex-wrap: wrap; /* Permitimos que las columnas se ajusten en varias filas si es necesario */
 }
 
+/* Estilos para cada columna del pie de página */
 .footer-column {
-    flex: 1;
     margin: 10px;
+    flex: 1; /* Permitimos que las columnas se expandan para llenar el espacio disponible */
+    text-align: center; /* Centramos el texto dentro de las columnas */
 }
 
+/* Estilos para el título de cada columna del pie de página */
 .footer-column h3 {
     color: #fff;
     font-size: 18px;
+    text-align: center; /* Centramos el texto dentro de las columnas */
 }
 
+/* Estilos para las listas dentro de las columnas del pie de página */
 .footer-column ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* Centramos el texto de las listas */
 }
 
+/* Estilos para cada elemento de lista dentro de las columnas del pie de página */
 .footer-column ul li {
     margin-bottom: 5px;
 }
 
+/* Estilos para los enlaces dentro de las listas del pie de página */
 .footer-column ul li a {
     color: #fff;
     text-decoration: none;
 }
 
+/* Definimos un breakpoint para dispositivos con un ancho máximo de 600px (móviles) */
 @media only screen and (max-width: 600px) {
+    /* Cambiamos la dirección del flexbox a columna para que el contenido se apile verticalmente */
     .content {
         flex-direction: column;
     }
+    
+    /* Alineamos las imágenes al centro */
+    .image {
+        text-align: center;
+    }
 
+    /* Eliminamos el margen derecho del texto para que las imágenes se muestren debajo de él */
+    .text {
+        margin-right: 0;
+    }
+
+    /* Cambiamos el número de columnas en el footer a 2 */
+    .footer-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    /* Establecemos el ancho de las columnas del footer en 50% para que haya dos columnas por fila */
+    .footer-column {
+        margin: 0;
+    }
 }
