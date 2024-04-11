@@ -1,10 +1,12 @@
 /* Estilos generales para el cuerpo del documento */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto; /* Añadimos margen automático a los lados para centrar el contenido */
+    max-width: 800px; /* Establecemos un ancho máximo para el cuerpo */
+    padding: 0 0px; /* Añadimos un poco de relleno a los lados */
     background-color: #fff;
 }
+
 
 /* Estilos para el encabezado */
 header {
