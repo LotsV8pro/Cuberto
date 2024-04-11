@@ -69,12 +69,14 @@ section {
 .section-2 .image {
     justify-content: flex-start; /* Alineamos la imagen de la sección 2 a la izquierda */
     order: 1;
+    margin: 5px;
 }
 .section-2 .text {
     order: 2; /* Cambiamos el orden para que el texto aparezca después de la imagen */
-    margin-right: 20px; /* Añadimos margen derecho para separar el texto de la imagen */
+    margin-right: 40px; /* Aumentamos el margen derecho para separar más el texto de la imagen en dispositivos de escritorio */
     justify-content: flex-start;
 }
+
 .contentclass {
     font-size: 33px;
     color: rgb(97, 97, 97)
